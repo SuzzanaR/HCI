@@ -1,0 +1,111 @@
+﻿<Page x:Class="PetShop.Podesavanja"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:PetShop"
+      >
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+    <Grid Height="850">
+
+        <Border Background="{DynamicResource Text2}" VerticalAlignment="Center" Width="0.1" Height="700" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+        <Button Cursor="Hand" Template="{StaticResource NoMouseOverButtonTemplate}"  Click="CloseButton_Click" Background="Transparent" BorderThickness="0" Margin="0,15,20,0" HorizontalAlignment="Right"  VerticalAlignment="Top">
+            <Image Source="Images/shutdown.png" Height="30"/>
+        </Button>
+        <TextBlock Text="Podešavanja" FontSize="22" Foreground="{DynamicResource Text}" Margin="60,30,60,-106"/>
+
+        <Border Background="{DynamicResource Card}" CornerRadius="6" Width="750" Height="100" Margin="50,90" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" Direction="320" BlurRadius="6" ShadowDepth="2" Opacity="0.5"/>
+            </Border.Effect>
+            <Grid Margin="0,0,0,0">
+                <Image Source="Images/themes.png" Margin="25,22,0,21" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                <Label Foreground="{DynamicResource Text}" VerticalAlignment="Top" HorizontalContentAlignment="center" Margin="90,20,0,0" Grid.Column="0" FontSize="18" HorizontalAlignment="Left" Content="Tema"></Label>
+                <Label Foreground="{DynamicResource Text2}" VerticalAlignment="Top" HorizontalContentAlignment="center" Margin="90,50,0,0" Grid.Column="0" FontSize="14" HorizontalAlignment="Left" Content="Izaberite boje koje će se pojaviti u vašoj aplikaciji."></Label>
+
+                <ComboBox x:Name="myComboBox" Width="150" Height="35" SelectionChanged="ComboBox_SelectionChanged" HorizontalAlignment="Right" Margin="40,0"
+                         VerticalContentAlignment="Center" FontSize="14" Padding="6">
+                    <ComboBoxItem Content="Svijetla tema" />
+                    <ComboBoxItem Content="Tamna tema"/>
+                    <ComboBoxItem Content="Zemljana tema" />
+
+                </ComboBox>
+            </Grid>
+
+        </Border>
+
+
+
+
+
+        <Border Background="{DynamicResource Card}" CornerRadius="6" Width="750" Height="100" Margin="50,210" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" Direction="320" BlurRadius="6" ShadowDepth="2" Opacity="0.5"/>
+            </Border.Effect>
+            <Grid Margin="0,0,0,0">
+                <Image Source="Images/language.png" Margin="25,22,0,21" Height="50" HorizontalAlignment="Left"/>
+
+                <Label Foreground="{DynamicResource Text}" VerticalAlignment="Top" HorizontalContentAlignment="center" Margin="90,20,0,0" Grid.Column="0" FontSize="18" HorizontalAlignment="Left" Content="Jezik"></Label>
+                <Label Foreground="{DynamicResource Text2}" VerticalAlignment="Top" HorizontalContentAlignment="center" Margin="90,50,0,0" Grid.Column="0" FontSize="14" HorizontalAlignment="Left" Content="Izaberite jezik koji će se pojaviti u vašoj aplikaciji."></Label>
+
+                
+            </Grid>
+
+        </Border>
+
+
+        <Border Background="{DynamicResource Card}" CornerRadius="6" Width="750" Height="350" Margin="0,330,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Name="MainBorder">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" Direction="320" BlurRadius="6" ShadowDepth="2" Opacity="0.5"/>
+            </Border.Effect>
+            <Grid Margin="0,0,0,0">
+                <Image Source="Images/edit.png" Margin="25,25,0,0" Height="40" HorizontalAlignment="Left" VerticalAlignment="top"/>
+
+                <Label Foreground="{DynamicResource Text}" VerticalAlignment="Top" HorizontalContentAlignment="center" Margin="90,20,0,0" Grid.Column="0" FontSize="18" HorizontalAlignment="Left" Content="Podaci"></Label>
+                <Label Foreground="{DynamicResource Text2}" VerticalAlignment="Top" HorizontalContentAlignment="center" Margin="90,50,0,0" Grid.Column="0" FontSize="14" HorizontalAlignment="Left" Content="Uredite svoje lične podatke."></Label>
+                
+                <StackPanel Name="Data"  VerticalAlignment="Center" HorizontalAlignment="Right" Width="250" Margin="30,20">
+
+                    <TextBlock Text="Ime" Margin="25,0" Foreground="{DynamicResource Text}"  FontSize="14"/>
+                    <TextBox Name="FirstNameTextBox" Width="200" Margin="0,5" BorderThickness="0.5" BorderBrush="{DynamicResource Text2}" Padding="5,2" Foreground="{DynamicResource Text}" Background="{DynamicResource Card}" Height="25" VerticalAlignment="Center" />
+
+                    <TextBlock Text="Prezime" Margin="25,0" Foreground="{DynamicResource Text}"  FontSize="14"/>
+                    <TextBox Name="LastNameTextBox" Width="200" Margin="0,5" BorderThickness="0.5" BorderBrush="{DynamicResource Text2}" Padding="5,2" Foreground="{DynamicResource Text}" Background="{DynamicResource Card}" Height="25" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="Broj telefona" Margin="25,0"  Foreground="{DynamicResource Text}"  FontSize="14"/>
+                    <TextBox Name="PhoneNumberTextBox" Width="200" Margin="0,5" BorderThickness="0.5" BorderBrush="{DynamicResource Text2}" Padding="5,2" Foreground="{DynamicResource Text}" Background="{DynamicResource Card}" Height="25" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="Korisničko ime" Margin="25,0" Foreground="{DynamicResource Text}"  FontSize="14"/>
+                    <TextBox Name="UsernameTextBox" Width="200" Margin="0,5" BorderThickness="0.5" BorderBrush="{DynamicResource Text2}" Padding="5,2" Foreground="{DynamicResource Text}" Background="{DynamicResource Card}" Height="25" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="Lozinka" Margin="25,0" Foreground="{DynamicResource Text}"  FontSize="14"/>
+                    <PasswordBox Name="PasswordBox" Width="200" Margin="0,5" BorderThickness="0.5" BorderBrush="{DynamicResource Text2}" Padding="5,2" Foreground="{DynamicResource Text}" Background="{DynamicResource Card}" Height="25" VerticalAlignment="Center"/>
+
+                    <Button Content="POTVRDA" Name="AddEmployeeButton" Width="200" Height="25" Margin="0,5" 
+                    Cursor="Hand" Template="{StaticResource NoMouseOverButtonTemplate}" Click="UpdateUser_Click"
+                    Foreground="White" Background="#047c34" BorderThickness="0"
+/>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Page>

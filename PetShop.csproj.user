@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainWindowAdmin1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Zaposleni.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Update="Themes\DarkTheme.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Update="Themes\Theme3.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Update="Themes\LightTheme.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Update="ArtikliAdmin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindowAdmin1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Podesavanja.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Racuni.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Artikli.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sifarnici.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Zaposleni.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

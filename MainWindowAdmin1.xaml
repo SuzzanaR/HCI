@@ -1,0 +1,117 @@
+﻿<Window x:Class="PetShop.MainWindowAdmin1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pet Shop" Height="700" Width="1050"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"
+        >
+
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+
+
+        <StackPanel Orientation="Vertical" Width="180" Background="{DynamicResource Backdrop}" HorizontalAlignment="Left">
+            <Button Content="ADMINISTRATOR" Style="{StaticResource NavButtonStyle}" Height="30" Margin="0,5" HorizontalContentAlignment="Center" Template="{StaticResource NoMouseOverButtonTemplate}" 
+             Background="{DynamicResource Backdrop}" Foreground="{DynamicResource Text2}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="150"/>
+                </Grid.RowDefinitions>
+                <Button BorderThickness="0" Cursor="Hand" Click="Button_ClickA" Height="35" Background="{DynamicResource Backdrop}" Grid.Row="0" VerticalAlignment="top" Margin="0,15" 
+                        Template="{StaticResource NoMouseOverButtonTemplate}" >
+
+                    <Button.Content>
+                        <Image Source="Images/article.ico"  Height="37" Margin="0,0" HorizontalAlignment="Center">
+                        </Image>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="Artikli" Content="ARTIKLI" Click="Button_ClickA" FontSize="14" Height="25" Style="{StaticResource NavButtonStyle}" Grid.Row="1" Template="{StaticResource NoMouseOverButtonTemplate}" 
+                    Background="{DynamicResource Backdrop}" Foreground="{DynamicResource Text}" VerticalContentAlignment="Top" Margin="0,-15" BorderThickness="0" BorderBrush="Wheat"
+                        HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+
+                <Button BorderThickness="0" Click="Button_ClickR" Cursor="Hand" Margin="0,-15" Background="{DynamicResource Backdrop}" Grid.Row="2" VerticalAlignment="top" Template="{StaticResource NoMouseOverButtonTemplate}" >
+                    <Button.Content>
+                        <Image Source="Images/bill.png" Height="35" Margin="0,0" HorizontalAlignment="Center">
+                         </Image>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="Racun" Content="RAČUNI" Click="Button_ClickR" FontSize="14" Height="25" Style="{StaticResource NavButtonStyle}" Grid.Row="3" Template="{StaticResource NoMouseOverButtonTemplate}" 
+                    Background="{DynamicResource Backdrop}" BorderBrush="Wheat" BorderThickness="0" Foreground="{DynamicResource Text}"  Margin="0,-35" 
+                        HorizontalAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Top"/>
+
+
+
+                <Button BorderThickness="0"  Click="Button_ClickZ" Cursor="Hand" Margin="0,-40"  Height="38" Grid.Row="4" Background="{DynamicResource Backdrop}" VerticalAlignment="Top" Template="{StaticResource NoMouseOverButtonTemplate}" >
+                    <Button.Content>
+                        <Image Source="Images/employee.png" Height="41" Margin="0,0"> 
+
+                        </Image>
+                    </Button.Content>
+                </Button>
+
+                <Button Content="ZAPOSLENI" x:Name="Zaposleni" FontSize="14" Click="Button_ClickZ" Height="30" Style="{StaticResource NavButtonStyle}" Grid.Row="5" Template="{StaticResource NoMouseOverButtonTemplate}" 
+                Background="{DynamicResource Backdrop}"  Foreground="{DynamicResource Text}" Margin="0,-65" 
+                HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                <Button BorderThickness="0" Click="Button_ClickS" Margin="0,-50" Cursor="Hand" Grid.Row="6" Background="{DynamicResource Backdrop}" VerticalAlignment="top" Template="{StaticResource NoMouseOverButtonTemplate}" >
+                    <Button.Content>
+                        <Image Source="Images/category.png" Height="32" Margin="0,0">
+
+                        </Image>
+                    </Button.Content>
+                </Button>
+                <Button Content="ŠIFARNICI" x:Name="Sifarnici" FontSize="14" Click="Button_ClickS" Height="30" Style="{StaticResource NavButtonStyle}" Grid.Row="7" Template="{StaticResource NoMouseOverButtonTemplate}" 
+                  Background="{DynamicResource Backdrop}"  Foreground="{DynamicResource Text}" Margin="0,-75" 
+                  HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+
+
+
+                <Button BorderThickness="0" Click="Button_ClickP" Cursor="Hand" Margin="0,-65"  Grid.Row="8" Background="{DynamicResource Backdrop}" VerticalAlignment="top" Template="{StaticResource NoMouseOverButtonTemplate}" >
+                    <Button.Content>
+                        <Image Source="Images/setting.png" Height="36" Margin="0,0">
+                        </Image>
+                    </Button.Content>
+                </Button>
+                <Button Content="PODEŠAVANJA" x:Name="Podesavanja" Cursor="Hand" FontSize="14" Click="Button_ClickP" Height="30" Style="{StaticResource NavButtonStyle}" Grid.Row="9" Template="{StaticResource NoMouseOverButtonTemplate}" 
+                    Background="{DynamicResource Backdrop}" Foreground="{DynamicResource Text}" Grid.RowSpan="2" Margin="0,-85" 
+                        HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                <Image Source="Images/logout.png" Height="25" Cursor="Hand" Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-75" >
+               </Image>
+                <Button Margin="0,-110"  Content="ODJAVA" FontSize="14" Click="Odjava_Click" Grid.Row="11" Height="30" Style="{StaticResource NavButtonStyle}" Template="{StaticResource NoMouseOverButtonTemplate}" 
+                    Background="{DynamicResource Backdrop}" Cursor="Hand" Foreground="{DynamicResource Text}" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+
+                <TextBlock Text="© Pet Shop 2025" Foreground="{DynamicResource Text2}" Margin="0,-100" Grid.Row="12" HorizontalAlignment="Center" VerticalAlignment="top"/>
+
+            </Grid>
+        </StackPanel>
+
+        <Frame Name="MainContentFrame2" Margin="180,0,0,0" NavigationUIVisibility="Hidden" Background="{DynamicResource Backdrop}"/>
+    </Grid>
+
+
+</Window>

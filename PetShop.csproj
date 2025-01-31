@@ -1,0 +1,84 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\arrow.png" />
+    <None Remove="Images\article.ico" />
+    <None Remove="Images\article.png" />
+    <None Remove="Images\bill.png" />
+    <None Remove="Images\broom.png" />
+    <None Remove="Images\category.png" />
+    <None Remove="Images\close.png" />
+    <None Remove="Images\delete.png" />
+    <None Remove="Images\dogfood.png" />
+    <None Remove="Images\edit.png" />
+    <None Remove="Images\employee.png" />
+    <None Remove="Images\filter.png" />
+    <None Remove="Images\language.png" />
+    <None Remove="Images\logout.png" />
+    <None Remove="Images\petshop.png" />
+    <None Remove="Images\plus.png" />
+    <None Remove="Images\s" />
+    <None Remove="Images\setting.png" />
+    <None Remove="Images\settings.png" />
+    <None Remove="Images\shutdown.png" />
+    <None Remove="Images\themes.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Themes\DarkTheme.xaml" />
+    <Page Remove="Themes\LightTheme.xaml" />
+    <Page Remove="Themes\Theme3.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\article.ico" />
+    <Resource Include="Images\article.png" />
+    <Resource Include="Images\bill.png" />
+    <Resource Include="Images\broom.png" />
+    <Resource Include="Images\category.png" />
+    <Resource Include="Images\close.png" />
+    <Resource Include="Images\delete.png" />
+    <Resource Include="Images\dogfood.png" />
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\employee.png" />
+    <Resource Include="Images\filter.png" />
+    <Resource Include="Images\language.png" />
+    <Resource Include="Images\logout.png" />
+    <Resource Include="Images\petshop.png" />
+    <Resource Include="Images\plus.png" />
+    <Resource Include="Images\setting.png" />
+    <Resource Include="Images\settings.png" />
+    <Resource Include="Images\shutdown.png" />
+    <Resource Include="Images\themes.png" />
+    <Resource Include="Themes\DarkTheme.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Themes\Theme3.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="Themes\LightTheme.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Sifarnici.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
